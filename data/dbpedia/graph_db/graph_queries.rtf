@@ -1,0 +1,229 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Liberation Serif{\*\falt Times New Roman};}{\f4\fswiss\fprq2\fcharset0 Liberation Sans{\*\falt Arial};}{\f5\froman\fprq2\fcharset0 Helvetica{\*\falt Arial};}{\f6\fnil\fprq2\fcharset0 Noto Sans CJK SC Regular;}{\f7\fnil\fprq2\fcharset0 FreeSans;}{\f8\fswiss\fprq0\fcharset128 FreeSans;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\s0\snext0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033 Normal;}
+{\s15\sbasedon0\snext16\sb240\sa120\keepn\dbch\af6\dbch\af7\afs28\loch\f4\fs28 Heading;}
+{\s16\sbasedon0\snext16\sl288\slmult1\sb0\sa140 Text Body;}
+{\s17\sbasedon16\snext17\sl288\slmult1\sb0\sa140\dbch\af8 List;}
+{\s18\sbasedon0\snext18\sb120\sa120\noline\i\dbch\af8\afs24\ai\fs24 Caption;}
+{\s19\sbasedon0\snext19\noline\dbch\af8 Index;}
+}{\*\generator LibreOffice/5.1.6.2$Linux_X86_64 LibreOffice_project/10m0$Build-2}{\info{\creatim\yr0\mo0\dy0\hr0\min0}{\revtim\yr2020\mo1\dy14\hr13\min7}{\printim\yr0\mo0\dy0\hr0\min0}}\deftab720
+\viewscale100
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse451\pgwsxn12240\pghsxn15840\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\pgdscnxt0 Default Style;}}
+\formshade{\*\pgdscno0}\paperh15840\paperw12240\margl1440\margr1440\margt1440\margb1440\sectd\sbknone\sectunlocked1\pgndec\pgwsxn12240\pghsxn15840\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+{\*\ftnsep}\pgndec\pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+sudo bin/neo4j-admin import --nodes import/graph_load_learning_statement_ids.csv --nodes import/graph_load_concept_term_ids.csv }{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+--relationships:isBroadTerm import/graph_load_broad_narrow.csv --relationships:isNarrowTerm import/graph_load_narrow_broad.csv --relationships:isPreferredTerm import/graph_load_npt.csv --relationships:isNonpreferredTerm import/graph_load_pt.csv }
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+number_of_chunks = 14}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+[npts_i.to_csv('bs_\{id\}.csv'.format(id=id)) for id, npts_i in  enumerate(np.array_split(npts, number_of_chunks))]}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_concept_term_ids.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+CREATE (p:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.ConceptTermDBID), term: csvLine.term \})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_learning_statement_ids.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\rtlch \ltrch\loch\fs24\loch\f5
+CREATE (p:LearningStatement \{ LearningStatementDBID: toInteger(csvLine.LearningStatementDBID), statement: csvLine.LearningStatement \})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_narrow_broad.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (bt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.BroadTermID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(nt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.NarrowTermID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (nt)-[:isNarrowTerm]->(bt)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_narrow_broad.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (bt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.BroadTermID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(nt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.NarrowTermID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (bt)-[:isBroadTerm]->(nt)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_broad_narrow.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (bt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.BroadTermID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(nt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.NarrowTermID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (nt)-[:isNarrowTerm]->(bt)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_broad_narrow.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (bt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.BroadTermID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(nt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.NarrowTermID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (bt)-[:isBroadTerm]->(nt)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_concept_chains.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (bt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.RelatedTermID_x)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(nt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.RelatedTermID_y)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (bt)-[:isRelatedTerm]->(nt)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_npt.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (pt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.PreferredTermID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(npt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.NPTID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (pt)-[:isPreferredTerm]->(npt)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_npt.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (pt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.PreferredTermID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(npt:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.NPTID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (npt)-[:isNonPreferredTerm]->(pt)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+_____________________________________________________________________}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_concept_term_ids.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+CREATE (p:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.ConceptTermDBID), term: csvLine.ConceptTerm \})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_learning_statement_ids.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+CREATE (p:LearningStatement \{ LearningStatementDBID: toInteger(csvLine.LearningStatementDBID), statement: csvLine.LearningStatement \})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_learning_objective_ids.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+CREATE (p:LearningObjective \{ LearningObjectiveDBID: toInteger(csvLine.LearningObjectiveDBID), objective: csvLine.LearningObjective, blooms_level: toInteger(csvLine.BloomsLevel), assessment: csvLine.Assessment \})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_CT_LS.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (ct:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.ConceptTermDBID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(ls:LearningStatement \{ LearningStatementDBID: toInteger(csvLine.LearningStatementDBID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (ct)-[:embodies]->(ls)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_CT_LS.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (ct:ConceptTerm \{ ConceptTermDBID: toInteger(csvLine.ConceptTermDBID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(ls:LearningStatement \{ LearningStatementDBID: toInteger(csvLine.LearningStatementDBID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (ls)-[:describes]->(ct)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_LS_LO.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (lo:LearningObjective \{ LearningObjectiveDBID: toInteger(csvLine.LearningObjectiveDBID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(ls:LearningStatement \{ LearningStatementDBID: toInteger(csvLine.LearningStatementDBID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (lo)-[:teaches]->(ls)}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+USING PERIODIC COMMIT 500}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+LOAD CSV WITH HEADERS FROM "file:///graph_load_LS_LO.csv" AS csvLine}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MATCH (lo:LearningObjective \{ LearningObjectiveDBID: toInteger(csvLine.LearningObjectiveDBID)\}),}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\fs24\loch\f5
+  }{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+(ls:LearningStatement \{ LearningStatementDBID: toInteger(csvLine.LearningStatementDBID)\})}
+\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af6\langfe2052\dbch\af7\afs24\alang1081\loch\f3\fs24\lang1033\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640{\cf1\expnd0\expndtw0\kerning1\rtlch \ltrch\loch\fs24\loch\f5
+MERGE (ls)-[:collocates]->(lo)}
+\par }
