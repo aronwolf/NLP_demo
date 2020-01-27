@@ -1,6 +1,7 @@
-import sys; sys.path.insert(0, "..")                                   
+import sys; sys.path.insert(0, "../")                                   
+#sys.path.insert(0, "../machine_assistance/") 
 import utils.file_io as file_io
-import machine_assistance.tf_idf as tf_idf 
+import tf_idf as tf_idf 
 import pandas as pd                          
 from sklearn.metrics.pairwise import linear_kernel
 import utils.tokenize_statements as tokenize_statements
@@ -11,11 +12,6 @@ import re
 
 def sim(sim_index, sample1, sample2, tfidf, subject, filter = False):
     vocab_json='../data/machine_assistance/%s_concept_term_vocabulary.json' % subject
-#    vocab_json='../data/machine_assistance/wiki_and_concept_term_vocabulary.json'
-#    vocab_json='../data/machine_assistance/business_concept_term_vocabulary.json'
-#    vocab_json='../data/machine_assistance/social_studies_concept_term_vocabulary.json'
-#    vocab_json='../data/machine_assistance/language_arts_concept_term_vocabulary.json'
-#    vocab_json='../data/machine_assistance/science_concept_term_vocabulary.json'
     with open(vocab_json) as vocab_file:
         vocab = json.load(vocab_file)
 
