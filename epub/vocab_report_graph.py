@@ -1,8 +1,9 @@
 import sys; sys.path.insert(0, "..")                                   
-import utils.file_io as file_io                                        
-import pandas as pd                                             
-import machine_assistance.similarity as similarity                          
-import machine_assistance.tf_idf as tf_idf           
+sys.path.insert(0, "../machine_assistance/")                            
+import utils.file_io as file_io                                         
+import pandas as pd                                                     
+import similarity                                                       
+import tf_idf   
 import re
 import nltk
 import pickle
@@ -50,7 +51,7 @@ for r in range(len(terms)):
     print "Compiling samples"
 
     if sample1.empty:                                                             
-        sample1 = file_io.read_xlsx('../data/machine_assistance/bento_%s.xlsx' % subject)
+        sample1 = file_io.read_xlsx('../data/machine_assistance/%s_test.xlsx' % subject)
         tfidf = pickle.load(open('../data/machine_assistance/%s_concept_term_vocabulary_full_matrix.pickle' % subject, "rb" ))                                               
     else:
         tfidf = tf_idf.tf_idf_fit(sample1.LearningStatement, '../data/machine_assistance/%s_concept_term_vocabulary.json' % subject)                                    
