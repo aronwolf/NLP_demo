@@ -42,7 +42,7 @@ significant concept statements.
 > the data dumps from DBPedia.org, with some customization for the
 > purposes of the project involved here. They are often taken from the
 > technical glossaries of textbooks prepared by the authoring teams,
-> used to track the discipline specific concept coverage.\
+> used to track the discipline specific concept coverage.
 >
 > **What are "Learning Statements"?**
 > Learning statements are what I have referred to earlier as
@@ -55,7 +55,7 @@ significant concept statements.
 > definitions, but can include exemplars and factual statements as well.
 > The learning statements used in this project are intended to be highly
 > formulaic in their grammatical construction, so that they could
-> possibly be algorithmically composed at some point.\
+> possibly be algorithmically composed at some point.
 >
 > **EPUB format and glossary.xhtml files**
 > EPUB is an industry standard, and an easily parsable complex markup
@@ -71,7 +71,7 @@ significant concept statements.
 > A simple file input/output interface with consistent syntax, and
 > several advantages over the basic Pandas xlsx write modules. Also, was
 > intended to eventually auto detect file type to allow support for
-> multiple formats for upload and export.\
+> multiple formats for upload and export.
 > 
 > **tokenize\_statements.py**
 > A tokenizer and lemmatizer used to preprocess text before the TFIDF
@@ -106,7 +106,7 @@ significant concept statements.
 > I elected to use the redirects values in this dataset to represent
 > nonpreferred terms. Many of them are simple misspellings, but a great
 > many are alternate terms, and the sheer number of terms available make
-> this highly useful.\
+> this highly useful.
 >
 > **dbpedia\_skos.py**
 > The Simple Knowledge Organization System standard aka SKOS offers
@@ -131,13 +131,13 @@ significant concept statements.
 > from the DBPedia triple set to construct BT/NT/NPT datasets ready for
 > upload into Neo4j using the inbuilt Cypher Query Language. The etl
 > master function would also be used as an incremental update while both
-> the SQL and the graph databases were being maintained in parallel.\
+> the SQL and the graph databases were being maintained in parallel.
 > 
 > **etl\_bulk\_transform.py**
 > For initial graph db setup, the Cypher queries proved much too slow,
 > so the bulk transform module was written to translate the imports into
 > a form that could be uploaded expediently via the Neo4j cli admin
-> interface.\
+> interface.
 > 
 > **graph\_queries.rtf**
 > This is a record of the Cypher queries used for import and
@@ -148,14 +148,14 @@ significant concept statements.
 >
 > The TFIDF vectorizer is the tool that scans the texts and builds up
 > term frequency-inverse document frequency term matricies that
-> represent the documents to the comparison tools.\
+> represent the documents to the comparison tools. The TFIDF vectorizer is seperate from the similarity function so that an artificial intelligence algorithm can later be integrated easily to calculate similarity instead of the cosine based calculation below. Experiments are ongoing with TensorFlow and Keras based implementations.
 > 
 > **similarity.py**
 > This simple similarity comparator uses a cosine similarity function to
 > calculate the similarities between two documents, specifically in this
 > case, concept definitions and learning statements to find concept
 > overlap, or text segments and learning statements to infer the
-> aboutness of a given piece of text. There is also an experiential
+> aboutness of a given piece of text. There is also an experimental
 > subroutine in the comments here that artificially boosts the term
 > frequency numbers for terms that appear in the curated term list, on
 > the assumption that those terms are more indicative of concept
@@ -168,7 +168,7 @@ significant concept statements.
 > **vocab\_report.py**
 > By using a Cypher query to retrieve only a subset of learning
 > statements, based on concept term BT/NT/NPT relationships in the
-> graph, allows a smaller number of more focused statements to be
-> processes not only faster, but offering more precise results. If the
+> graph, this algorithm allows a smaller number of more focused statements to be
+> processed, not only faster, but offering more precise results. If the
 > Cypher query does not result in any matches for the term, the script
 > pulls the entire library as a backup.
