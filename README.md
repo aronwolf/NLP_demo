@@ -28,7 +28,7 @@ significant concept statements.
 > **Basic data structure**
 > Why curated metadata?
 > Most basically, I decided to use as much of the curated metadata I
-> could, as opposed to problematically derived metadata, because it was
+> could, as opposed to programmatically derived metadata, because it was
 > already available, and it was presumably accurate enough to be of use
 > to the authoring teams. Since they are the subject matter experts in
 > their fields and I am not, I wanted to be able to have access to their
@@ -142,6 +142,7 @@ significant concept statements.
 > **graph\_queries.rtf**
 > This is a record of the Cypher queries used for import and
 > manipulation of the vocabulary graph.
+![alt text](https://github.com/aronwolf/NLP_demo/blob/master/graph_screen-shot.png?raw=true)
 
 **Step 5: The NLP Secret Sauce**
 > **tf\_idf.py**
